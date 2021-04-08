@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "8dc4836c-fd66-49e1-a7a9-5d5cdf4039e4",
+		"name": "demo-ms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cid\": 1,\n    \"name\": \"Machine Learning\"\n}"
+				},
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/course",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rid\": 1,\n    \"grade\": 1,\n    \"course\": {\n        \"cid\": 1\n    },\n    \"student\": {\n        \"sid\": 1\n    }\n}"
+				},
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/registration",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sid\": 1,\n    \"name\": \"Daniel J\"\n}"
+				},
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/student",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/course/1",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"course",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/course/2",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"course",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/student/1",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Registration",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{server-name}}:{{port}}{{context-path}}/registration/1",
+					"protocol": "http",
+					"host": [
+						"{{server-name}}"
+					],
+					"port": "{{port}}{{context-path}}",
+					"path": [
+						"registration",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
